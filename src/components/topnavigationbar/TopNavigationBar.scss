@@ -1,0 +1,37 @@
+.hamburger-icon
+{
+    font-size: 20px;
+    // border: 2px solid gray;
+    padding: 0px 20px;
+    font-weight: lighter;
+}
+.top-navigation-bar
+{
+    display: flex;
+    align-items: center;
+    color:#034662;
+    background-image: url("calendar-template copy.jpg");
+}
+.date
+{
+    // font-size: 72px;
+    background: #216583;
+    background: linear-gradient(to right, #03354b 80%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  padding-right: 20px;
+  -webkit-text-fill-color: transparent;
+}
+.today-button
+{
+    margin-left: 20px;
+    border: 2px solid #d4d4d4;
+    padding: 5px;
+    font-weight: bolder;
+    background-color: white;
+    border-radius: 20px;
+}
+.calendar-text
+{
+    font-weight: bolder;
+    font-size: larger;
+}

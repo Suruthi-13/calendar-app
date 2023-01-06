@@ -1,0 +1,84 @@
+.event-schedular
+{
+  position:relative;
+  // top: 80px;
+//   height: 100vh;
+// height: 85vh;
+  // width: 770px;
+  // border: 2px solid gray;
+}
+
+.day-event
+{
+  // position: relative;
+ 
+  // scroll-behavior: auto;
+  // height: 50vh;
+}
+.routes-pages
+{
+  // transition: top 0.3s;
+  height: 80vh;
+  overflow-y: scroll;
+  // background-color: red;
+}
+.routes-pages::-webkit-scrollbar {
+  display: none;
+}
+.event-schedular .calendar
+{
+   width: 52%;
+  //  height: 80vh;
+  
+   position: fixed;
+   margin-left: 11px;
+   color: #216583;
+  //  overflow-y: scroll;
+   background-color: white;
+}
+.event-schedular .week-days,.event-schedular .next-week-days,.event-schedular .suffix-space
+{
+ 
+  // height: 80px;
+  border-right: 1px solid #d4d4d4;
+  border-bottom: 1px solid #d4d4d4;
+}
+.event-schedular .calendar .week-days .events{
+  display: block;
+  // background-color:#BD2E7A;
+  background: #216583;
+  color: white;
+  margin-bottom: 10px;
+// background: linear-gradient(to right, #216583 0%, #FFFFFF 100%);
+  border-radius: 8px;
+
+}
+.event-schedular .grid-body
+{
+  height: 80vh;
+}
+.event-schedular .week-days{
+  // border-top: 1px solid green;
+}
+.event-schedular .true
+{
+  // background-color: white;
+  // height:12.8vh;
+  border-radius: 0px;
+  background-color: white;
+}
+.event-schedular .calendar .grid-header
+{
+  display: none;
+}
+.event-schedular .calendar .days-of-week
+{
+    
+  border-bottom: 1px solid #d4d4d4; 
+  // position: fixed; 
+}
+.event-schedular .calendar .week-days:hover
+{
+  background-color: white;
+  border-radius: 5px;
+}

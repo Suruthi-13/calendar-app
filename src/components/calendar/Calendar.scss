@@ -1,0 +1,115 @@
+.calendar
+{
+    width: 300px;
+    // margin-top: 10px;
+    margin: 5px;
+    // color: white;
+    // margin-left: 20px;
+    background-color: #216583;
+    color: white;
+    // height: 130px;
+    border: 3px solid white;
+    border-radius: 20px;
+    // border-right: #d4d4d4;
+    // border-left: #d4d4d4;
+}
+.true
+{
+    // background-color: gray;
+    background: #216583;
+    background: linear-gradient(to right, #216583 0%, #FFFFFF 100%);
+    border-radius: 50px;
+}
+
+
+
+.nav-buttons
+{
+    cursor: pointer;
+    font-weight: bold;
+}
+ .events
+{
+//   background-color: #216583;
+  display: none;
+  
+}
+// .next-week-days
+// {
+    
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+   
+// }
+// .next-week-days
+// {
+//     color: aqua;
+// }
+.week-days:hover
+{
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+}
+.flex-items
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid-header
+{
+    display: grid;
+    font-size: 13px;
+    grid-template-columns: repeat(7,minmax(0,1fr));
+    border-bottom:2px solid #d4d4d4;
+    // height: 120px;
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    line-height: 25px;
+    // border: 2px solid black;
+}
+// .suffix-space
+// {
+//     color: white;
+// }
+.grid-body
+{
+    display: grid;
+    font-size: 13px;
+    height: 120px;
+    grid-template-columns: repeat(7,minmax(0,1fr));
+    // border: 2px solid black;
+    // border:2px solid #d4d4d4;
+    justify-content: center;
+    // line-height: 25px;
+    text-align: center;
+    align-items: center; 
+   
+}
+.days-of-week
+{
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.year-month
+{
+    grid-column: span 3;
+    font-size: small;
+    font-weight: bolder;
+   
+    // border-left: 2px solid #d4d4d4;
+
+}
+.suffix-space,.week-days,.next-week-days
+{
+    text-align: center;
+    height: 100%;
+    // border: 2px solid gray;
+    // background-color: aqua;
+}
