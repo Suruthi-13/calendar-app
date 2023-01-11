@@ -1,0 +1,58 @@
+@import '../../../CommonStyles.scss';
+.day-event-display-container{
+    left: 0px;
+    height: 79vh;
+    background-color: white;
+}
+.time-grid
+{
+    display: flex;
+}
+.events-title
+{
+    background: #42557A;
+    color: white;
+    border-left: 4px solid white;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    z-index: 1000;
+    position: absolute;
+    top: 8px;
+    left: 55px;
+    width: 550px;
+}
+.events-display
+{
+    color: white;
+    font-size: larger;
+    padding: 5px;
+}
+.static-time-text{
+    display: block;
+    list-style-type: none;
+    width: 40px;
+    height: 10px;
+    text-align: right;
+    font-size: 12px;
+    font-weight: bolder;
+    position: relative;
+    bottom: 28px;
+    right: 10px;
+
+} 
+.time-lines
+{
+    display: grid;
+    width: 80%;
+    height: 50px;
+    position: relative;
+    grid-template: 0px/auto;
+    grid-row-gap: 0;
+    border: 1px solid black;
+    padding: 0px;
+}
+.events
+{
+    background-color: #afaeae;
+}

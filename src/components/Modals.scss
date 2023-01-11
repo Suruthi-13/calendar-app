@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap");
+@import '../CommonStyles.scss';
+.modal-popup-daily-events
+{
+    position: absolute;
+    @include modal-popup;
+    width: 350px;
+    height: 30vh;
+    
+}
+.popup-events
+{
+    font-family:$fontFamily;
+    color: black;
+    margin-bottom: 3px;
+    display: flex;
+    margin-left: 10px;
+}
+.popup-events label{
+    font-family:$fontFamily;
+    width: 80px;
+    margin-right: 10px;
+    // border: 2px solid black;
+    color: $fontColor;
+}
+.events-icon
+{
+    @include display;
+    align-items: flex-end;
+    font-family: $fontFamily;
+   
+}
+.buttons-container
+{
+  margin-top: 10px;
+}
+.delete-alert-container,.delete-alert-container-popup
+{
+    padding-top: 80px;
+    text-align: center;
+    background-color: white;
+    z-index: 1;
+    border-radius: 10px;
+    justify-content: center;
+}
+.delete-alert-container-popup
+{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+.delete-alert
+{
+    font-family: $fontFamily;
+}

@@ -1,98 +1,79 @@
-.close-icon
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap");
+@import '../CommonStyles.scss';
+.xmark-icon
 {
     text-align: right;
     padding-right: 30px;
     padding-top: 20px;
 }
-.modal-popup
+.event-creator-box
 {
     position: relative;
-    top: 50%;
+    font-family: 'Lobster', cursive;
     width: 550px;
-    bottom: 50%;
     border-radius: 20px;
-    left: 50%;
-    right: auto;
-    bottom: auto;
-    margin-right: -50%;
-    transform: translate(-50%,-50%);
-    opacity: 1;
-    // background-color: #216583;
-    background-image:  url("calendar-template.jpg");
-
+    @include modal-popup;
 }
+
 .buttons
 {
     display: flex;
     text-align: end;
 }
-.input-field,.description-field
+.eventname-input-field,.description-input-field
 {
     width: 90%;
-    // margin: 10px;
     margin: 10px;
     border: none;
-    height: 35px;
+    padding: 8px;
     border-bottom: 1px solid gray;
-    border-radius: 20px;
+    border-radius: 10px;
 }
-.input-fields
+.eventname-input-field::placeholder,.description-input-field::placeholder{
+    font-family: $fontFamily;
+    padding: 2px;
+    font-weight: bold;
+    color: black;
+}
+
+.input-field
 {
     display: flex;
     padding: 10px;
     align-items: center;
 }
-.input-fields label{
-    // border: 2px solid black;
+.input-field label{
+    font-family: $fontFamily;
+    font-size: 18px;
     width: 200px;
-    color: black;
+    color:  #42557A ;
 }
-.input-body
+
+.event-time-field
 {
-    // width: 550px;
-    height: 300px;
-    // width: 50%;
-}
-.appointment-date-field,.app
-{
-    // margin-bottom: 20px;
     display: flex;
     align-items: center;
-    width: 80%;
-    // justify-content: center;
-    // border: 2px solid black;
+    border-radius: 10px;
+    width: 50%;
+    padding: 5px;
 }
 .labels
 {
     width: 30%;
-    // border: 2px solid black;
 }
-.primary-button-two
+.primary-button-left
 {
-    padding: 5px;
-    margin-top: 10px;;
-   
-    // justify-content: flex-end;
-    // text-align: right;
+    @include primary-button;
     margin-left: 2%;
-    background-color: white;
-    border-color: #d4d4d4;
-    border-radius: 10%;   
+    
 }
 .primary-button{
-    padding: 5px;
-    margin-top: 10px;;
+    @include primary-button;
    
-    // justify-content: flex-end;
-    // text-align: right;
-    margin-left: 70%;
-    background-color: white;
-    border-color: #d4d4d4;
-    border-radius: 10%;
 }
-.primary-button:hover,.primary-button-two:hover
+.primary-button:hover,.primary-button-left:hover
 {
-    background-color:  #216583;
+    @include background;
 }
 
 

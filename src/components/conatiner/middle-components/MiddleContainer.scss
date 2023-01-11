@@ -1,71 +1,73 @@
+@import '../../../CommonStyles.scss';
 .event-schedular
 {
   position:relative;
-  // top: 80px;
-//   height: 100vh;
-// height: 85vh;
-  // width: 770px;
-  // border: 2px solid gray;
-}
-
-.day-event
-{
-  // position: relative;
- 
-  // scroll-behavior: auto;
-  // height: 50vh;
+  background-color: white;
+  height: 80vh;
 }
 .routes-pages
 {
-  // transition: top 0.3s;
-  height: 80vh;
   overflow-y: scroll;
-  // background-color: red;
+}
+.event-schedular .popup
+{
+  position: absolute;
+  background-color: white;
 }
 .routes-pages::-webkit-scrollbar {
   display: none;
 }
 .event-schedular .calendar
 {
-   width: 52%;
-  //  height: 80vh;
-  
+   width: 53%;
+   height: 78vh;
+   background-color: white;
    position: fixed;
    margin-left: 11px;
-   color: #216583;
-  //  overflow-y: scroll;
-   background-color: white;
+   color:  #121B4F;
+   
 }
 .event-schedular .week-days,.event-schedular .next-week-days,.event-schedular .suffix-space
 {
- 
-  // height: 80px;
+  background-color: white;
   border-right: 1px solid #d4d4d4;
   border-bottom: 1px solid #d4d4d4;
+  border-left: 1px solid white;
 }
+
 .event-schedular .calendar .week-days .events{
   display: block;
-  // background-color:#BD2E7A;
-  background: #216583;
+  @include background;
   color: white;
+  cursor: pointer;
   margin-bottom: 10px;
-// background: linear-gradient(to right, #216583 0%, #FFFFFF 100%);
-  border-radius: 8px;
 
+}
+.event-schedular .event-schedular{
+  position: relative;
 }
 .event-schedular .grid-body
 {
   height: 80vh;
+  position: relative;
+  bottom: 8px;
+  background-color: white;
 }
 .event-schedular .week-days{
-  // border-top: 1px solid green;
+  height: 15vh;
+  margin-top: 3px;
+
+}
+ .week-days:hover
+{
+  color: black;
 }
 .event-schedular .true
 {
-  // background-color: white;
-  // height:12.8vh;
   border-radius: 0px;
-  background-color: white;
+  color: white;
+  height: 100%;
+  @include background;
 }
 .event-schedular .calendar .grid-header
 {
@@ -73,10 +75,8 @@
 }
 .event-schedular .calendar .days-of-week
 {
-    
-  border-bottom: 1px solid #d4d4d4; 
-  // position: fixed; 
-}
+    border-bottom: 1px solid #d4d4d4; 
+ }
 .event-schedular .calendar .week-days:hover
 {
   background-color: white;

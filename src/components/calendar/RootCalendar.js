@@ -1,11 +1,10 @@
-import {React,useState} from 'react';
+import {React} from 'react';
 import Calendar from './Calendar';
 
 function RootCalendar(props) {
-    // const[currentDate,setCurrentDate]=useState(new Date());
   return (
     <div>
-      <Calendar currentDate={props.currentDate} setCurrentDate={props.setCurrentDate}  events={props.events}/>
+      <Calendar currentDate={props.currentDate} setCurrentDate={props.setCurrentDate}  events={props.events} setEvents={props.setEvents} deleteEvent={props.deleteEvent}/>
     </div>
   );
 }

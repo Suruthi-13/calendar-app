@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap");
+
+$fontFamily: 'Roboto', sans-serif;
+$fontColor:' #42557A';
+@mixin display {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin background
+{
+    background: #42557A;
+    background: linear-gradient(to bottom right, #42557A 38%, #121B4F 85%);
+}
+@mixin modal-popup
+{
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+    opacity: 1;
+    border: 2px solid  #42557A;
+    background-color: white;
+}
+@mixin primary-button
+{
+    padding: 5px;
+    margin-bottom: 10px;
+    font-family: $fontFamily;
+    margin-left: 70%;
+    border-radius: 10%;
+    background-color: white;
+    border-color: #d4d4d4;   
+}

@@ -1,0 +1,62 @@
+@import '../../../CommonStyles.scss';
+.current-date-display-container
+{
+    color:  #121B4F;
+    @include display;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.arrow-icon,.arrow-icon-year
+{
+    cursor: pointer;
+    border: 2px solid white;
+    width: 30px;
+    font-weight: bolder;
+    background-color: white ;
+    border-radius: 50%;
+    text-align: center;
+    @include display;
+}
+.arrow-icon-year
+{
+    color: white;
+    @include background;
+    height: 40px;
+    text-align: center;
+    font-size: larger;
+}
+
+.route-buttons
+{
+    text-decoration: none;
+    padding: 5px;
+    font-weight: bolder;
+    color: white;
+    margin-right: 5px;
+    @include background;
+    @include display;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 80px;
+    text-align: center;
+}
+.day
+{
+    font-size: 20px;
+    width: 100px;
+    padding-left: 10px;
+    align-items: center;
+    font-weight: bolder;
+}
+.date
+{
+    font-size: 18px;
+    font-weight: bolder;
+    @include display;
+    cursor: pointer
+}
+.route-container
+{
+    display: flex;
+    justify-content: space-between;
+}

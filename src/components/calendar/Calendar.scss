@@ -5,7 +5,9 @@
     margin: 5px;
     // color: white;
     // margin-left: 20px;
-    background-color: #216583;
+    // background-color: #216583;
+    // background: #42557A;
+// background: linear-gradient(to bottom right, #42557A 38%, #121B4F 85%);
     color: white;
     // height: 130px;
     border: 3px solid white;
@@ -20,10 +22,13 @@
     background: linear-gradient(to right, #216583 0%, #FFFFFF 100%);
     border-radius: 50px;
 }
+// .popup
+// {
+//     position: absolute;
+// }
 
 
-
-.nav-buttons
+.movenext-button
 {
     cursor: pointer;
     font-weight: bold;
@@ -50,7 +55,7 @@
 {
   background-color: white;
   color: black;
-  border-radius: 20px;
+  border-radius: 50px;
 }
 .flex-items
 {
@@ -68,7 +73,7 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    line-height: 25px;
+    // line-height: 25px;
     // border: 2px solid black;
 }
 // .suffix-space
@@ -81,6 +86,7 @@
     font-size: 13px;
     height: 120px;
     grid-template-columns: repeat(7,minmax(0,1fr));
+    grid-auto-rows: 1fr;
     // border: 2px solid black;
     // border:2px solid #d4d4d4;
     justify-content: center;
@@ -97,7 +103,7 @@
     align-items: center;
    
 }
-.year-month
+.current-month-year
 {
     grid-column: span 3;
     font-size: small;
@@ -106,10 +112,13 @@
     // border-left: 2px solid #d4d4d4;
 
 }
-.suffix-space,.week-days,.next-week-days
-{
+.suffix-space,.week-days{
     text-align: center;
-    height: 100%;
+    // height: 100%;
     // border: 2px solid gray;
     // background-color: aqua;
+}
+.suffix-space,.next-week-days
+{
+    height: 100%;
 }

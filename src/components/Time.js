@@ -1,6 +1,6 @@
 export const  Time=[
     {
-        start:'',
+        start:'00',
         end:'2 PM',
         // event:[
         //     {
