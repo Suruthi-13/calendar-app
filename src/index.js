@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// const portal= ReactDOM.createRoot(document.getElementById('portal'));
 // var cors = require('cors')
 // var app = builder.Build();
 

@@ -4,28 +4,38 @@ import Cell from './Cell';
 import format from 'date-fns/format';
 import { startOfMonth,endOfMonth,differenceInDays,sub,add,setDate } from 'date-fns';
 import Modals from '../Modals';
+import { GetAllEvents } from '../../services/UserServices';
 const daysOfWeek=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 var  eventName, eventDescription,startTime,endTime,id;
+
 function Calendar(props) {
+  const[events,setEvents]=useState('')
+  useEffect(()=>
+  {
+   const getAllEvents= async ()=>
+   {
+     const allEvents= await GetAllEvents();
+    //  setEvents(allEvents.data);
+    setEvents(allEvents.data)
+   }
+   getAllEvents();
+  },[events])
     const[eventDisplay,setEventDisplay]=useState(false);
     const startDate=startOfMonth(props.currentDate);
     const endDate=endOfMonth(props.currentDate);
     const numberOfDays=differenceInDays(endDate,startDate)+1;
     const prefixDays= startDate.getDay();
     const suffixDays=6-endDate.getDay();
+    // console.log(props.events);
     const handleClick=(index)=>
     {
      const day=setDate(props.currentDate,index);
      props.setCurrentDate(day);
     
     }
-     const eventDisplayFunction=(e)=>{
-      eventName= e.target.getAttribute("data-title");
-      eventDescription= e.target.getAttribute("data-description");
-      startTime= e.target.getAttribute("data-startTime");
-      endTime=e.target.getAttribute("data-endTime");
-      id=e.target.getAttribute("data-id");
-      setEventDisplay(true)
+     const eventDisplayFunction=(Id,e)=>{
+      id=Id
+      setEventDisplay(!eventDisplay);
     }
   return (
     <div className='calendar'>
@@ -45,22 +55,19 @@ function Calendar(props) {
             {Array.from({length:numberOfDays}).map((_,key)=>{
                 const date=key+1;
                 const isCurrentDate=date===props.currentDate.getDate();
-                return <Cell className="week-days" onClick={()=>handleClick(date)} isActive={isCurrentDate}>{date}
-                 {props.events && props.events.results.map((item)=>item.appointmentDateStartTime.slice(0,10)===format(setDate(props.currentDate,date),"yyy-MM-dd")&&
-                 <div>
-                 <div className='events' data-startTime={item.appointmentDateStartTime} data-title={item.eventTitle} 
-                 data-endTime={item.appointmentDateEndTime} data-description={item.description} data-id={item.appointmentID} 
-                 onClick={eventDisplayFunction}>{item.eventTitle}
-                 </div>
+                return(<div className="week-days"><Cell  onClick={()=>handleClick(date)} isActive={isCurrentDate}><div  className='date-number'>{date}</div></Cell>
+                <div className="event-name">
+                 {events && events.results.map((item)=>item.appointmentDateStartTime.slice(0,10)===format(setDate(props.currentDate,date),"yyy-MM-dd")&&
+                 <div className='events' 
+                    onClick={(e)=>eventDisplayFunction(item.appointmentID,e)}>{item.eventTitle}
                 </div>
                 )}
-                 {eventDisplay&&<Modals  
+                 {eventDisplay&& <Modals  
                   eventDisplay={eventDisplay} 
-                  setEventDisplay={setEventDisplay} eventName={eventName} 
-                   eventDescription={eventDescription} startTime={startTime} id={id} 
-                    endTime={endTime} deleteEvent={props.deleteEvent} />}
-              </Cell>
-            })}
+                  setEventDisplay={setEventDisplay}  
+                   id={id}/>}
+              </div>
+              </div>)})}
             {Array.from({length: suffixDays}).map((_,key)=>{
                 const date=key+1;
                 return <Cell className="next-week-days">{date}</Cell>

@@ -8,25 +8,32 @@
 {
     display: flex;
 }
-.events-title
+.events-title-container
 {
-    background: #42557A;
+    background:#b42b74;
     color: white;
     border-left: 4px solid white;
+    border-radius: 4px 20px 20px 20px !important; 
     display: flex;
     justify-content: space-between;
     border-radius: 10px;
-    z-index: 1000;
+    z-index: 2;
     position: absolute;
-    top: 8px;
     left: 55px;
     width: 550px;
+}
+.events-title{
+    padding: 8px 5px;
+    width: 100%;
+    display: flex;
+    text-align: left;
 }
 .events-display
 {
     color: white;
     font-size: larger;
-    padding: 5px;
+    padding: 0px;
+    margin-left: 3px;
 }
 .static-time-text{
     display: block;
@@ -39,12 +46,16 @@
     position: relative;
     bottom: 28px;
     right: 10px;
-
 } 
+.events-display-trash-icon
+{
+    padding: 10px;
+    font-size: 15px;
+}
 .time-lines
 {
     display: grid;
-    width: 80%;
+    width: 70%;
     height: 50px;
     position: relative;
     grid-template: 0px/auto;
@@ -55,4 +66,13 @@
 .events
 {
     background-color: #afaeae;
+}
+.current-time-display
+{
+    position: relative;
+    color:#ea4335;
+    @include display;
+    left: -5px;
+    width: 750px;
+    height: 2px;
 }

@@ -16,7 +16,7 @@ function AppointmentCreator(props) {
     <div   className='appointment-creator-container'>
       <div><FontAwesomeIcon  onClick={toggle}  className="plus-icon" icon={faPlus} />
       <label  onClick={toggle}  className='create-text'>Create</label></div>
-      {display&&<div><EventCreatorPopUp setDisplay={setDisplay} display={display} events={props.events} setEvents={props.setEvents}  errorMessage={props.errorMessage} setErrorMessage={props.setErrorMessage}/></div>}
+      {display&&<div><EventCreatorPopUp setDisplay={setDisplay} display={display}  currentDate={props.currentDate}/></div>}
     </div>
     </div>
   );

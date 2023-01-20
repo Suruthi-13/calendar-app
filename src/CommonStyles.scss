@@ -2,6 +2,7 @@
 
 $fontFamily: 'Roboto', sans-serif;
 $fontColor:' #42557A';
+$borderRadius: '4px 20px 20px 20px !important';
 @mixin display {
     display:flex;
     align-items: center;
@@ -9,8 +10,10 @@ $fontColor:' #42557A';
 }
 @mixin background
 {
-    background: #42557A;
-    background: linear-gradient(to bottom right, #42557A 38%, #121B4F 85%);
+    background: #BA2D7B;
+    color: white;
+    background: linear-gradient(to right, #BA2D7B 33%, #7318A6 75%);
+    border-color: #d4d4d4;   
 }
 @mixin modal-popup
 {
@@ -22,7 +25,7 @@ $fontColor:' #42557A';
     margin-right: -50%;
     transform: translate(-50%,-50%);
     opacity: 1;
-    border: 2px solid  #42557A;
+    border-radius: $borderRadius;
     background-color: white;
 }
 @mixin primary-button
@@ -32,6 +35,6 @@ $fontColor:' #42557A';
     font-family: $fontFamily;
     margin-left: 70%;
     border-radius: 10%;
-    background-color: white;
     border-color: #d4d4d4;   
 }
+

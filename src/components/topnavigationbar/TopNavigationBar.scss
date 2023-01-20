@@ -9,13 +9,23 @@
 {
     display: flex;
     align-items: center;
-    // padding-left: 10px;
-    color:#034662;
+    justify-content: space-between;
     background-color: #FFFFFF;
+    background: #B42B74;
+    background: linear-gradient(to right, #B42B74 29%, #8544A2 52%, #3167E0 100%);
+}
+.search-box
+{
+    margin-right: 100px;
+    @include display;
+    padding: 3px;
+}
+.left-collections
+{
+    @include display;
 }
 .date
 {
-    background: white;
     padding-right: 20px;
 }
 .today-button
@@ -25,9 +35,12 @@
     padding: 5px;
     cursor: pointer;
     font-weight: bolder;
-    color: white;
-    @include background;
     border-radius: 20px;
+}
+.suggestion-box
+{
+    position:absolute;
+    background-color: red;
 }
 .calendar-text
 {

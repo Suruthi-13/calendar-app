@@ -8,13 +8,18 @@
 }
 .event-creator-box
 {
-    position: relative;
+    position: fixed;
     font-family: 'Lobster', cursive;
-    width: 550px;
+    width: 450px;
+    padding-left: 20px;
     border-radius: 20px;
+    border: 2px solid black;
     @include modal-popup;
+    z-index: 5;
+    background: #BD2E7A;
+    background: linear-gradient(to top right, #BD2E7A 0%, #FFFFFF 100%, #FFFFFF 27%);
+    border-radius: 4px 20px 20px 20px !important;
 }
-
 .buttons
 {
     display: flex;
@@ -22,20 +27,17 @@
 }
 .eventname-input-field,.description-input-field
 {
-    width: 90%;
-    margin: 10px;
+    width: 80%;
+    resize: none;
     border: none;
     padding: 8px;
-    border-bottom: 1px solid gray;
-    border-radius: 10px;
+    border: 1px solid gray;
 }
 .eventname-input-field::placeholder,.description-input-field::placeholder{
     font-family: $fontFamily;
     padding: 2px;
-    font-weight: bold;
     color: black;
 }
-
 .input-field
 {
     display: flex;
@@ -45,17 +47,17 @@
 .input-field label{
     font-family: $fontFamily;
     font-size: 18px;
-    width: 200px;
-    color:  #42557A ;
+    width: 100px;
+    color: white;
+    
 }
-
 .event-time-field
 {
     display: flex;
     align-items: center;
-    border-radius: 10px;
     width: 50%;
     padding: 5px;
+    border: 2px solid #d4d4d4;
 }
 .labels
 {

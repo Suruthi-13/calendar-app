@@ -3,7 +3,7 @@
 {
   position:relative;
   background-color: white;
-  height: 80vh;
+  height: 83vh;
 }
 .routes-pages
 {
@@ -19,44 +19,37 @@
 }
 .event-schedular .calendar
 {
-   width: 53%;
-   height: 78vh;
+   width: 57%;
    background-color: white;
+   border: 2px solid black;
    position: fixed;
    margin-left: 11px;
-   color:  #121B4F;
-   
+   color: black;
 }
 .event-schedular .week-days,.event-schedular .next-week-days,.event-schedular .suffix-space
 {
   background-color: white;
-  border-right: 1px solid #d4d4d4;
-  border-bottom: 1px solid #d4d4d4;
-  border-left: 1px solid white;
+  height: 88px;
+  margin: 2px;
 }
-
-.event-schedular .calendar .week-days .events{
-  display: block;
-  @include background;
-  color: white;
-  cursor: pointer;
-  margin-bottom: 10px;
-
+.event-schedular .week-days
+{
+  overflow-y: auto;
+}
+.event-schedular .week-days::-webkit-scrollbar {
+  display: none;
 }
 .event-schedular .event-schedular{
   position: relative;
 }
 .event-schedular .grid-body
 {
-  height: 80vh;
-  position: relative;
+  height: 570px;
   bottom: 8px;
   background-color: white;
 }
 .event-schedular .week-days{
-  height: 15vh;
   margin-top: 3px;
-
 }
  .week-days:hover
 {
@@ -65,9 +58,35 @@
 .event-schedular .true
 {
   border-radius: 0px;
+  border: 2px solid #b42b74;
+  color: black;
+  width: 30%;
+  margin: auto;
+    margin: auto;
+    border-radius: 50%;
+}
+.event-schedular .date-number
+{
+    position: sticky;
+    z-index: 1;
+}
+.event-schedular .date-number:hover
+{
+  background-color:pink;
+  color: black;
+  width: 30%;
+  margin: auto;
+  border-radius: 50%;
+}
+.event-schedular .calendar .event-name .events{
+  display: block;
   color: white;
-  height: 100%;
-  @include background;
+  cursor: pointer;
+  background:#b42b74;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 10px;
+
 }
 .event-schedular .calendar .grid-header
 {
@@ -81,4 +100,12 @@
 {
   background-color: white;
   border-radius: 5px;
+}
+@media screen and (max-width: 1025px)
+{
+  .event-schedular .calendar
+  {
+    width: 53%;
+    height: 85vh;
+  }
 }
