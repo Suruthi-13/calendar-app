@@ -3,14 +3,11 @@
 .modal-popup-daily-events
 {
     position: absolute;
-    border: 2px solid black;
     border-radius: 3px 20px 20px 20px !important;
     @include modal-popup;
     width: 350px;
     height: 30vh;
     z-index: 1000;
-    background: #BD2E7A;
-   background: linear-gradient(to top right, #BD2E7A 0%, #FFFFFF 100%, #FFFFFF 27%);
     
 }
 .modal-popup-daily-events .event-creator-box
@@ -37,9 +34,14 @@
     align-items: flex-end;
     font-family: $fontFamily;
 }
-.buttons-container
+.icons-container
 {
-  margin-top: 10px;
+  margin: 10px 20px;
+  text-align: right;
+}
+.trash-button
+{
+    margin-right: 10px;
 }
 .delete-alert-container,.delete-alert-container-popup
 {

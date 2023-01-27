@@ -1,14 +1,11 @@
-import Axios from 'axios';
-import {React,useState} from 'react';
+import {React} from 'react';
 import DailyAgenda from './DailyAgenda';
 import './RightContainer.scss'
 
 function RightContainer(props) {
- 
-
-  return (
+ return (
     <div className='output-container'>
-        <div className='primary-daily-agenda' ><DailyAgenda currentDate={props.currentDate}/></div>
+        <div className='primary-daily-agenda' ><DailyAgenda/></div>
     </div>
   );
 }

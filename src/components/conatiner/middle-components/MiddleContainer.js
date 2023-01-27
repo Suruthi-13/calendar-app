@@ -6,14 +6,14 @@ import { Routes,Route } from 'react-router-dom';
 import './MiddleContainer.scss';
 import '../../calendar/Calendar.scss'
 
-function MiddleContainer(props) {
+function MiddleContainer() {
  return (
     <div className='middle-container'>
-      <div className='selected-time-display'><CurrentDateDisplay currentDate={props.currentDate} setCurrentDate={props.setCurrentDate}/></div>
+      <div className='selected-time-display'><CurrentDateDisplay/></div>
       <div className='routes-pages'>
       <Routes >
-      <Route path="/day" element={<div className='event-schedular'><RootCalendar currentDate={props.currentDate} setCurrentDate={props.setCurrentDate}/></div>}/>
-      <Route path="/" element={<div className="day-event"><DailyEventTimeLineGrid currentDate={props.currentDate}  /></div>}/>
+      <Route path="/month" element={<div className='event-schedular'><RootCalendar/></div>}/>
+      <Route path="/" element={<div className="day-event"><DailyEventTimeLineGrid/></div>}/>
       </Routes>
       </div>
     </div>

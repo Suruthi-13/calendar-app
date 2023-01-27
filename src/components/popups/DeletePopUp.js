@@ -1,6 +1,8 @@
 import {React} from 'react';
 import Modal from 'react-modal'
 import { DeleteEvents} from '../../services/UserServices';
+import { useContext } from 'react';
+import { AppointmentContext } from '../../AppointmentContext ';
 const CUSTOM_STYLES={
     content:{
     position: 'fixed',
@@ -9,41 +11,38 @@ const CUSTOM_STYLES={
     right:'auto',
     bottom:'auto',
     marginRight:'-50%',
+    width: '350px',
+    height: '30vh',
+    display:'flex',
+    alignItems:'center',
+    textAlign:'center',
     transform:'translate(-50%,-50%)',
-    padding:'50px',
-    background: '#BD2E7A',
-    background: 'linear-gradient(to top right, #BD2E7A 0%, #FFFFFF 100%, #FFFFFF 27%)',
+    backgroundColor: '#ebf3fb',
+    border: '2px solid #61affe',
     color:'black',
     opacity: 1,
     zIndex:1000,
     }
 }
-
-// toast.configure();
 export default function DeletePopUp(props) {
+  const {setDayEvents}=useContext(AppointmentContext);
     const deleteToggle= async ()=>
     {
         await DeleteEvents(props.id);
-        // props.setError(result);
-        // toast(result,{position:toast.POSITION.BOTTOM_CENTER});
+        setDayEvents(Math.random());
         props.setDisplay(!props.display);
-        props.setEventDisplay(false);
+        props.setEventDisplay(!props.eventDisplay);
     }
-    
-   
-    // const portal = document.getElementById('portal');
   return(
-    <div className='modal-poup'>
+    <div className='modal-popup'>
     <Modal isOpen={true} style={CUSTOM_STYLES}  overlayClassName='overlay'>
-      <div ><div>Are you want to delete??</div>
+      <div style={{textAlign:'center',margin:'auto',alignItems:'center', justifyContent:'center'}}><div>Do you want to delete??</div>
         <div className='buttons-container'>
           <button onClick={deleteToggle} className='primary-button-left'>Yes</button>
-          <button onClick={()=>{props.setDisplay(!props.display);props.setEventDisplay(false)}} className='primary-button-left'>cancel</button>
+          <button onClick={()=>{props.setDisplay(!props.display);props.setEventDisplay(false)}} className='primary-button-left'>Cancel</button>
         </div>
       </div>
-      {/* <ToastContainer/> */}
-     </Modal>
-     
+    </Modal>
     </div>
   );
 }

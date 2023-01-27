@@ -5,6 +5,7 @@ function Cell(props) {
 
     <div onClick={props.onClick} className={props.className}>
       <div className={props.isActive?"true":undefined}>
+        <div className={props.activeDate?"currentDate":undefined}/>
       {props.children}
       </div>
     </div>

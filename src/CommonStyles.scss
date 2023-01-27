@@ -8,12 +8,10 @@ $borderRadius: '4px 20px 20px 20px !important';
     align-items: center;
     justify-content: center;
 }
-@mixin background
+@mixin red-background
 {
-    background: #BA2D7B;
-    color: white;
-    background: linear-gradient(to right, #BA2D7B 33%, #7318A6 75%);
-    border-color: #d4d4d4;   
+    background-color: #fae7e7;
+    border: 1px solid #edaaaa;
 }
 @mixin modal-popup
 {
@@ -26,7 +24,7 @@ $borderRadius: '4px 20px 20px 20px !important';
     transform: translate(-50%,-50%);
     opacity: 1;
     border-radius: $borderRadius;
-    background-color: white;
+    @include blue-background;
 }
 @mixin primary-button
 {
@@ -34,7 +32,22 @@ $borderRadius: '4px 20px 20px 20px !important';
     margin-bottom: 10px;
     font-family: $fontFamily;
     margin-left: 70%;
-    border-radius: 10%;
-    border-color: #d4d4d4;   
+    margin-top: 10px;
+    border-radius: 20px;
+    @include blue-background;
+     
 }
+@mixin blue-background
+{
+    background-color: #ebf3fb;
+    border: 2px solid #61affe;
+    color: black;
+}
+@mixin orange-background
+{
+    background:#fbf1e6;
+    color:black;
+    border: 1px solid #fca130;
+}
+
 

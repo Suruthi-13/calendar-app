@@ -1,191 +1,75 @@
 export const  Time=[
     {
-        start:'00',
-        end:'2 PM',
-        // event:[
-        //     {
-        //         title:'Stand Up',
-        //     }
-        // ]
+        start:'00'
     },
     {
-        start:'01',
-        end:'2 PM',
-        // event:[
-        //     {
-        //         title:'Catch Up meet',
-        //     }
-        // ]
+        start:'01'
     },
     {
-        start:'02',
-        end:'2 PM',
-        // event:[
-        //     {
-        //         title: '',
-        //     }
-        // ]
+        start:'02'
     },
     {
-        start:'03',end:'2 PM',
-
-        // event:[
-        //     {
-        //         title: ''
-        //     }
-        // ]
+        start:'03'
     },
     {
-        start:'04',end:'2 PM',
-        // event:[
-        //     {
-        //         title: ''
-        //     }
-        // ]
+        start:'04'
     },
     {
-        start:'05',end:'2 PM',
-        // event:[
-        //     {
-        //         title: ''
-        //     }
-        // ]
+        start:'05'
     },
     {
-        start:'06',end:'2 PM',
-        // event:[
-        //     {
-        //         title: ''
-        //     }
-        // ]
+        start:'06'
     },
     {
-        start:'07',end:'2 PM',
-        // event:[
-        //     {
-        //         title: ''
-        //     }
-        // ]
+        start:'07'
     },
     {
-        start:'08',end:'2 PM',
-        // event:[
-        //     {
-        //         title: ''
-        //     }
-        // ]
+        start:'08'
     },
     {
-        start:'09',end:'2 PM',
-        // event:[
-        //     {
-        //         title: ''
-        //     }
-        // ]
+        start:'09'
     },
     {
-        start:'10',end:'2 PM',
-        // event:[
-        //     {
-        //         title: ''
-        //     }
-        // ]
+        start:'10'
     },
     {
-        start:'11',
-        // event:[
-        //     {
-        //         title: ''
-        //     }
-        // ]
+        start:'11'
     },
     {
-        start:'12',
-        // event:[
-        //     {
-        //         title: ''
-        //     }
-        // ]
+        start:'12'
     },
     {
-        start:'13',end:'2 PM',
-        // event:[
-        //     {
-        //         title: ''
-        //     }
-        // ]
+        start:'13'
     },
     {
-        start:'14',end:'2 PM',
-        // event:[
-        //     {
-        //         title: ''
-        //     }
-        // ]
+        start:'14'
     },
     {
-        start:'15',end:'2 PM',
-        // event:[
-        //     {
-        //         title: ''
-        //     }
-        // ]
+        start:'15'
     },
     {
-        start:'16',end:'2 PM',
-        // event:[
-        //     {
-        //         title: ''
-        //     }
-        // ]
+        start:'16'
     },
     {
-        start:'17',end:'2 PM',
-        // event:[
-        //     {
-        //         title: ''
-        //     }
-        // ]
+        start:'17'
     },
     {
-        start:'18',end:'2 PM',
-        // event:[
-        //     {
-        //         title: ''
-        //     }
-        // ]
+        start:'18'
     },
     {
-        start:'19',end:'2 PM',
-        // event:[
-        //     {
-        //         title: ''
-        //     }
-        // ]
+        start:'19'
     },
     {
-        start:'20',end:'2 PM',
-        // event:[
-        //     {
-        //         title: ''
-        //     }
-        // ]
+        start:'20'
     },
     {
-        start:'21',end:'2 PM',
-        // event:[
-        //     {
-        //         title: ''
-        //     }
-        // ]
+        start:'21'
     },
     {
-        start:'22',end:'2 PM',
-        // event:[]
+        start:'22'
     },
     {
-        start:'23',end:'2 PM',
-        // event:[]
+        start:'23'
     }
 
 ]

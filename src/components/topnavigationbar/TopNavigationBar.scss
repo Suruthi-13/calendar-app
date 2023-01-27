@@ -2,7 +2,7 @@
 .hamburger-icon
 {
     font-size: 20px;
-    padding: 0px 20px;
+    padding: 5px 10px;
     font-weight: lighter;
 }
 .top-navigation-bar
@@ -10,15 +10,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #FFFFFF;
-    background: #B42B74;
-    background: linear-gradient(to right, #B42B74 29%, #8544A2 52%, #3167E0 100%);
+    border: 1px solid #d4d4d4;
+    margin-bottom: 3px;
 }
-.search-box
+.hidden-appointment-creator-container
 {
-    margin-right: 100px;
-    @include display;
-    padding: 3px;
+    display: none;
 }
 .left-collections
 {
@@ -31,7 +28,7 @@
 .today-button
 {
     margin-left: 20px;
-    border: 2px solid #d4d4d4;
+    @include blue-background;
     padding: 5px;
     cursor: pointer;
     font-weight: bolder;
@@ -46,4 +43,11 @@
 {
     font-weight: bolder;
     font-size: larger;
+}
+@media screen and (max-width: 769px) {
+  .hidden-appointment-creator-container
+  {
+    display: block;
+    width: 100px;
+  }  
 }

@@ -13,11 +13,9 @@
     width: 450px;
     padding-left: 20px;
     border-radius: 20px;
-    border: 2px solid black;
     @include modal-popup;
-    z-index: 5;
-    background: #BD2E7A;
-    background: linear-gradient(to top right, #BD2E7A 0%, #FFFFFF 100%, #FFFFFF 27%);
+    z-index: 1000;
+    @include blue-background;
     border-radius: 4px 20px 20px 20px !important;
 }
 .buttons
@@ -36,7 +34,7 @@
 .eventname-input-field::placeholder,.description-input-field::placeholder{
     font-family: $fontFamily;
     padding: 2px;
-    color: black;
+    color: #d4d4d4;
 }
 .input-field
 {
@@ -48,8 +46,7 @@
     font-family: $fontFamily;
     font-size: 18px;
     width: 100px;
-    color: white;
-    
+    color: black;
 }
 .event-time-field
 {
@@ -66,16 +63,21 @@
 .primary-button-left
 {
     @include primary-button;
+    width: 55px;
     margin-left: 2%;
-    
 }
 .primary-button{
     @include primary-button;
-   
+    width: 55px;
 }
-.primary-button:hover,.primary-button-left:hover
-{
-    @include background;
+@media screen and (max-width: 426px) {
+  .event-creator-box
+  {
+    width: 400px;
+  }
+  .primary-button-left,.primary-button{
+    width: 50px;
+  }    
 }
 
 

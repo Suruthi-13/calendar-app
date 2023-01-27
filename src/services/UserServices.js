@@ -14,7 +14,6 @@ const Toast=(message)=>
    closeOnClick: true,
    pauseOnHover: false,
    draggable: true,
-   color: 'black',
    })
       {<ToastContainer/>}
 }

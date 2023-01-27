@@ -1,28 +1,23 @@
-import {React,useState,useEffect} from 'react';
+import {React,useState,useContext} from 'react';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faXmark,faTrash,faPen} from "@fortawesome/free-solid-svg-icons";
 import './Modals.scss';
 import moment from 'moment';
 import DeletePopUp from './popups/DeletePopUp';
-import { UpdateEvent } from '../services/UserServices';
-import { GetEventById } from '../services/UserServices';
+import { AppointmentContext } from '../AppointmentContext ';
 import UpdatePopUp from './popups/UpdatePopUp';
 Modal.setAppElement('#root');
 var result;
 function Modals(props) {
+  const{allEvents}=useContext(AppointmentContext);
   const[display,setDisplay]=useState(false);
   const[updatePopup,setUpdatePopup]=useState(false);
- 
-  useEffect((e)=>
+  if(allEvents.length>0)
   {
-    
-     const getEvent=async()=>
-     {
-      result=await GetEventById(props.id);
-     }
-     getEvent();
-  },)
+   
+    result=(allEvents.find(s=>s.appointmentID===props.id));
+  }
   const toggle=()=>{
     setUpdatePopup(!updatePopup);
   }
@@ -35,11 +30,11 @@ function Modals(props) {
         {result && <div> <div className='popup-events'><label>Event</label>-{result.eventTitle}</div>
         <div className='popup-events'><label>Description</label>-{result.description}</div>
         <div className='popup-events'><label >Date</label>-{moment(result.appointmentDateStartTime).format("DD-MM-yy")}</div>
-        <div className='popup-events'><label >startTime</label>-{moment(result.appointmentDateStartTime).format("hh:mm a")}</div>
-        <div className='popup-events'><label>EndTime</label>-{moment(result.appointmentDateEndTime).format("hh:mm a")}</div> </div> }
-        <div className='buttons-container'><FontAwesomeIcon icon={faTrash} className='primary-button' onClick={()=>setDisplay(!display)}/>
-        <FontAwesomeIcon icon={faPen} onClick={toggle} className='primary-button-left'/></div></div>
-        {display && <DeletePopUp deleteEvent={props.deleteEvent} id={props.id} eventDisplay={props.eventDisplay} setDisplay={setDisplay} setEventDisplay={props.setEventDisplay} setError={props.setError}/>}
+        <div className='popup-events'><label >Start time</label>-{moment(result.appointmentDateStartTime).format("hh:mm a")}</div>
+        <div className='popup-events'><label>End time</label>-{moment(result.appointmentDateEndTime).format("hh:mm a")}</div> </div> }
+        <div className='icons-container'><FontAwesomeIcon icon={faTrash} className='trash-button' onClick={()=>setDisplay(!display)}/>
+        <FontAwesomeIcon icon={faPen} onClick={toggle} className='update-button'/></div></div>
+        {display && <DeletePopUp deleteEvent={props.deleteEvent} id={props.id} eventDisplay={props.eventDisplay} setDisplay={setDisplay} setEventDisplay={props.setEventDisplay}/>}
         {updatePopup && <div className='event-creator-box'>
          <UpdatePopUp result={result} setUpdatePopup={setUpdatePopup} updatePopup={updatePopup} eventDisplay={props.eventDisplay} setEventDisplay={props.setEventDisplay}/>
 

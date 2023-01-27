@@ -3,6 +3,7 @@
 *{
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  user-select: none;
 }
 .App
 {
@@ -21,8 +22,7 @@ height: 100vh;
 .top-navigation-bar
 {
   padding: 0px 0px;
-  border-bottom: 3px solid  #121B4F;
-  border: 1px solid black;
+  box-shadow: 3px 3px 2px 1px #d4d4d4;
   position:sticky;
   top: 1px;
   z-index: 1;
@@ -40,9 +40,7 @@ height: 100vh;
   position: sticky;
   top: 60px;
   width: 50%;
-  height: 90vh;
-  background-color: #100333;
-  border: 2px solid black;
+  height: 93vh;
 }
 .create-event-icon
 {
@@ -53,13 +51,18 @@ height: 100vh;
    padding: 0px;
    margin-left: 5px;
 }
+.toast-message-container
+{
+  background-color: #e8f6f0;
+  border-color: #76d3a8;
+  color: white;
+}
 .centre-component
 {
   position: relative;
-  border-radius: 20px;
   height: 78vh;
   top: 50px;
-  flex-basis: 70%;
+  flex-basis: 58%;
   margin-right: 25px;
  
 }
@@ -73,20 +76,17 @@ height: 100vh;
   height: 100vh;
   width: 120%;
   flex-basis: 100%;
-  .calendar{
-      width: 120%;
-  }
-
 }
 .current-date-display-container
 {
   position: fixed;
-  width: 53%;
+  width: 58%;
   border-radius: 20px;
   z-index: 1000;
-  border-bottom: 3px solid  #121B4F;
+  border-bottom: 3px solid  #d4d4d4;
   top:50px;
-  margin: 0px 50px;
+  margin: 0px 6px;
+  margin-left: 9px;
   padding: 2px 0px;
 }
 .right-component
@@ -94,8 +94,7 @@ height: 100vh;
   position: fixed;
   right: 10px;
   top:50px;
-  height: 90vh;
-  border: 2px solid black;
+  height: 93vh;
   flex-basis: 20%;
   margin-left: 20px;
   width: 20%;
@@ -111,5 +110,17 @@ height: 100vh;
   .right-component
   {
     flex-basis: 10%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .left-component{
+    display: none;
+  }
+}
+@media screen and (max-width:426px)
+{
+  .right-component
+  {
+    display: none;
   }
 }

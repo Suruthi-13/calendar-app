@@ -4,8 +4,6 @@
     @include display;
     justify-content: space-between;
     padding: 0 20px;
-    background: #BD2E7A;
-    background: linear-gradient(to top right, #BD2E7A 0%, #FFFFFF 100%);
 }
 .arrow-icon,.arrow-icon-year
 {
@@ -14,12 +12,12 @@
     margin: 2px;
     border-radius: 50%;
     text-align: center;
-    @include display;
+    @include red-background;
 }
 .arrow-icon-year
 {
-    color: white;
-    @include background;
+    color: black;
+    @include red-background;
     height: 40px;
     text-align: center;
     font-size: larger;
@@ -31,9 +29,8 @@
     font-weight: bolder;
     color: black;
     margin-right: 5px;
-    @include background;
+    @include orange-background;
     @include display;
-    border: 2px solid black;
     border-radius: 20px;
     width: 80px;
     text-align: center;
@@ -57,4 +54,27 @@
 {
     display: flex;
     justify-content: space-between;
+}
+@media screen and (max-width: 769px) {
+    .current-date-display-container 
+    {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 426px) {
+    .current-date-display-container
+    {
+        width:95%;
+        height: 8vh;
+        font-size: 10px;
+    }
+    .arrow-icon-year
+    {
+        height: 20px;
+    }
+    .route-buttons
+    {
+        width: 50px;
+    }
+    
 }

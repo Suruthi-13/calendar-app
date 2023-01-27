@@ -3,7 +3,6 @@
 {
   position:relative;
   background-color: white;
-  height: 83vh;
 }
 .routes-pages
 {
@@ -19,17 +18,18 @@
 }
 .event-schedular .calendar
 {
-   width: 57%;
+   width: 58%;
    background-color: white;
-   border: 2px solid black;
+   border: 2px solid #d4d4d4;
+   height: 90vh;
    position: fixed;
-   margin-left: 11px;
+   margin-left: 10px;
    color: black;
 }
 .event-schedular .week-days,.event-schedular .next-week-days,.event-schedular .suffix-space
 {
   background-color: white;
-  height: 88px;
+  height: 90px;
   margin: 2px;
 }
 .event-schedular .week-days
@@ -44,7 +44,7 @@
 }
 .event-schedular .grid-body
 {
-  height: 570px;
+  height: 670px;
   bottom: 8px;
   background-color: white;
 }
@@ -55,38 +55,35 @@
 {
   color: black;
 }
-.event-schedular .true
-{
-  border-radius: 0px;
-  border: 2px solid #b42b74;
-  color: black;
-  width: 30%;
-  margin: auto;
-    margin: auto;
-    border-radius: 50%;
-}
 .event-schedular .date-number
 {
-    position: sticky;
-    z-index: 1;
+    z-index: 6;
+}
+.event-schedular .true
+{
+  background-color: #61affe;
+  border: 2px solid #ebf3fb;
+  width: 25px;
 }
 .event-schedular .date-number:hover
 {
-  background-color:pink;
+  border: 2px solid black;
   color: black;
-  width: 30%;
-  margin: auto;
+  width: 25px;
   border-radius: 50%;
 }
 .event-schedular .calendar .event-name .events{
   display: block;
   color: white;
   cursor: pointer;
-  background:#b42b74;
+ @include blue-background;
   width: 60%;
   margin: auto;
   margin-bottom: 10px;
-
+}
+.event-schedular .next-week-days
+{
+ display: none;
 }
 .event-schedular .calendar .grid-header
 {
@@ -94,8 +91,9 @@
 }
 .event-schedular .calendar .days-of-week
 {
-    border-bottom: 1px solid #d4d4d4; 
- }
+   font-weight: bolder;
+   border-bottom: 1px solid #d4d4d4; 
+}
 .event-schedular .calendar .week-days:hover
 {
   background-color: white;
@@ -107,5 +105,34 @@
   {
     width: 53%;
     height: 85vh;
+  }
+}
+@media screen and (max-width: 769px)
+{
+  .event-schedular .calendar
+  {
+    width: 70%;
+  }
+  .event-schedular .calendar .grid-body
+  {
+    height: 250px;
+  }
+  .event-schedular .calendar .currentDate
+  {
+    width: 13%;
+    border-radius: 1px;
+    position: absolute;
+    border-color: orange;
+    background: transparent;
+    z-index: 0;
+  }
+  .event-schedular .calendar .event-name .events
+  {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 426px) {
+  .event-schedular .calendar{
+    width: 95%;
   }
 }
